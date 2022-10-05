@@ -1,0 +1,46 @@
+@import 'styles/colors';
+@import 'styles/media';
+.wrapper {
+  background: linear-gradient(90deg, $bg-first 0%, $bg-second 100%);
+  padding: 1rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px - 2rem);
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      text-align: right;
+      .leftButtons {
+        display: flex;
+        gap: 10px;
+        @include media-breakpoint-down(sm) {
+          justify-content: space-between;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        flex-direction: column-reverse;
+        row-gap: 10px;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+    .select {
+      width: 100%;
+    }
+    :global {
+      .ant-table-cell {
+        &:last-child {
+          width: 25%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

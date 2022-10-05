@@ -1,0 +1,16 @@
+@import 'styles/colors';
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, $bg-first 0%, $bg-second 100%);
+  img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
