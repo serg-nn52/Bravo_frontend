@@ -29,6 +29,7 @@ const OrdersList: React.FC = () => {
       });
     }
   }
+  books.sort((a, b) => b.quantity - a.quantity);
 
   const columns = [
     {
